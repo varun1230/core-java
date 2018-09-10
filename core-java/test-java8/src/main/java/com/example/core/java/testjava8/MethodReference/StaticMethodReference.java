@@ -22,12 +22,8 @@ public class StaticMethodReference {
 		Consumer<String> stringPrinter = System.out::println;
 		Consumer<String> lambdaStringPrinter = (String s) -> {System.out.println(s);};
 	
-		Consumer<Integer> consumerInt = (Integer i) -> System.out.println(" "+i);
-//		Consumer<String> consumerAndThen = consumerInt.andThen(i -> System.out.print(" Printed After"+i));
-		
 		stringPrinter.accept("Printing this string");
 		lambdaStringPrinter.accept(" This is the lambda String Consumer");
-		
 		
 		//Reference to instance method of an arbitary object of particular type
 		
@@ -40,5 +36,7 @@ public class StaticMethodReference {
 
 	
 	}
+	
+	
 
 }
